@@ -1,10 +1,23 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { Routes } from "./routes";
+import { AuthProvider } from "./hooks/auth";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+import GlobalStyle from "./styles/global";
+import { ThemeProvider } from "styled-components";
+import theme from "./styles/theme";
+
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.min.css";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
+    </ThemeProvider>
+    <ToastContainer limit={3} theme="colored" />
+  </React.StrictMode>
+);

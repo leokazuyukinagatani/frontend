@@ -1,11 +1,20 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  padding: 3.5rem 4rem;
-  gap: 4rem;
-  border-radius: 1rem;
+  width: 100%;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  input {
+    background-color: ${({ theme }) => theme.COLORS.DARK_900};
+    color: ${({ theme }) => theme.COLORS.LIGHT_100};
+    padding: 0.875rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+  }
 `

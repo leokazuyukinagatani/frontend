@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { Home } from "../pages/Home";
 
 // import { Home } from '../pages/Home'
 // import { Profile } from '../pages/Profile'
@@ -8,13 +9,13 @@ import { Routes, Route } from "react-router-dom";
 
 export function AppRoutes() {
   return (
-    <></>
-    // <Routes>
-    //   <Route path="/" element={<Home/>}/>
-    //   <Route path="/profile" element={<Profile/>}/>
-    //   <Route path="/new" element={<New/>}/>
-    //   <Route path="/details/:id" element={<Details/>}/>
-    //   <Route path="/update/:id" element={<Update/>}/>
-    // </Routes>
+
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      {/* <Route path="/profile" element={<Profile/>}/>
+      <Route path="/new" element={<New/>}/>
+      <Route path="/details/:id" element={<Details/>}/>
+      <Route path="/update/:id" element={<Update/>}/> */}
+    </Routes>
   );
 }

@@ -31,15 +31,23 @@ export default createGlobalStyle`
     transform: scale(1.5);
   }
 
-  body, input, button, textarea {
-    font-size: 20px;
-    font-family: "Roboto Slab", serif;
-    outline: none;
+  body, button, textarea {
+    font-family: 'Roboto', sans-serif;
+    font-weight: regular;
+    font-size: 1rem;
+    line-height: 100%;
+    text-decoration: none;
 
   }
 
   a {
     text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: medium;
+    font-size: 0.875rem;
+    line-height: 150%;
+    text-decoration: none;
+    color: ${({theme}) => theme.COLORS.LIGHT_100}
   }
 
   button, a {
